@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC - Daniel Fortes</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <header class="header">
+            <h1>Calculadora de Índice de Massa Corporal (IMC)</h1>
+            <button id="theme-toggle" aria-label="Alternar Modo Claro/Escuro">
+                <i class="fas fa-moon"></i> </button>
+        </header>
+
+        <main class="calculator-card">
+            <h2>Calcule Seu IMC</h2>
+            <div class="input-group">
+                <label for="peso">Peso (em kg):</label>
+                <input type="number" id="peso" placeholder="Ex: 80" step="0.1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="altura">Altura (em metros):</label>
+                <input type="number" id="altura" placeholder="Ex: 1.70" step="0.01" required>
+            </div>
+
+            <button id="calcular-btn">Calcular IMC</button>
+
+            <div id="resultado-container" class="result-container hidden">
+                <h3>Seu Resultado:</h3>
+                <p id="imc-resultado" class="result-value"></p>
+                <p id="classificacao" class="result-classification"></p>
+
+                <div class="table-container">
+                    <h4>Tabela de Classificação do IMC (OMS)</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>IMC (kg/m²)</th>
+                                <th>Classificação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Abaixo de 18,5</td><td>Abaixo do peso</td></tr>
+                            <tr><td>18,5 a 24,9</td><td>Peso normal</td></tr>
+                            <tr><td>25,0 a 29,9</td><td>Sobrepeso</td></tr>
+                            <tr><td>30,0 a 34,9</td><td>Obesidade Grau I</td></tr>
+                            <tr><td>35,0 a 39,9</td><td>Obesidade Grau II</td></tr>
+                            <tr><td>Acima de 40,0</td><td>Obesidade Grau III (Mórbida)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <p id="erro-mensagem" class="error-message"></p>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 | Calculadora | Daniel Fortes</p>
+    </footer>
+
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
